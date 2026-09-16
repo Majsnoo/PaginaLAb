@@ -1,6 +1,8 @@
 (function(){
+  // Keep the copyright year current without requiring manual updates.
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Toggle the mobile navigation menu and close it after a selection.
   var toggle = document.getElementById('menuToggle');
   var nav = document.querySelector('.main-nav');
   if(toggle && nav){
@@ -26,6 +28,7 @@
     });
   }
 
+  // Show the floating WhatsApp button after the visitor reaches the contact area.
   var waFloat = document.getElementById('waFloat');
   var contactSection = document.getElementById('contacto');
   if('IntersectionObserver' in window && waFloat && contactSection){
@@ -51,6 +54,7 @@
     waFloat.classList.add('show');
   }
 
+  // Reveal content as it enters the viewport, with a fallback for older browsers.
   if('IntersectionObserver' in window){
     var revealObserver = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){

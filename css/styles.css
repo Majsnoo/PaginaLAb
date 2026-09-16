@@ -114,7 +114,7 @@
   }
   .hero-figure svg{width:150px;height:150px;color:rgba(255,255,255,.5);}
 
-  /* ---------- Trust strip ---------- */
+  /* ---------- Trust metrics ---------- */
   .trust{
     background:var(--off-white);
     border-bottom:1px solid var(--hairline);
@@ -144,7 +144,7 @@
   }
   .section-head p{font-size:16px;line-height:1.65;color:var(--text-muted);margin:0;}
 
-  /* ---------- Servicios ---------- */
+  /* ---------- Services ---------- */
   .services-list{
     display:grid;grid-template-columns:1fr 1fr;
     border-top:1px solid var(--hairline);
@@ -161,7 +161,7 @@
   }
   .service-row p{font-size:14.5px;line-height:1.6;color:var(--text-muted);margin:0;}
 
-  /* ---------- Nosotros ---------- */
+  /* ---------- About ---------- */
   .about{background:var(--navy-900);color:var(--white);}
   .about .wrap{
     display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
@@ -185,7 +185,7 @@
   .about-visual::before{content:"";position:absolute;inset:26px;border:1px solid rgba(95,163,208,.4);}
   .about-visual svg{width:38%;height:38%;color:rgba(255,255,255,.55);}
 
-  /* ---------- Contacto ---------- */
+  /* ---------- Contact ---------- */
   .contact{background:var(--off-white);}
   .contact-grid{
     display:grid;grid-template-columns:0.9fr 1.1fr;gap:0;
@@ -239,7 +239,10 @@
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
 
-  /* ---------- Mobile ---------- */
+  /* Flexible images and media */
+  img, video, iframe{max-width:100%;height:auto;}
+
+  /* ---------- Responsive ---------- */
   @media (max-width:900px){
     nav.main-nav{display:none;}
     .phone-chip{display:none;}
@@ -256,47 +259,18 @@
     .hero-figure{display:none;}
   }
   @media (max-width:600px){
+    .wrap{padding:0 18px;}
+    .hero{padding:64px 0 56px;}
+    .hero h1{font-size:32px;}
+    .hero-actions{flex-direction:column;align-items:stretch;}
     .header-actions .btn-primary{display:none;}
+    .trust-inner{grid-template-columns:1fr;}
+    section{padding:56px 0;}
   }
 
   @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
     html{scroll-behavior:auto;}
     .reveal{opacity:1;transform:none;transition:none;}
     .wa-float.show{animation:none;}
   }
-
-
-  /* ===== Responsive ===== */
-
-/* Imágenes y media flexibles */
-img, video, iframe {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .main-nav { display: none; }
-  .menu-toggle { display: block; }
-  .trust-inner { grid-template-columns: 1fr 1fr; }
-  .services-list { grid-template-columns: 1fr; }
-  .about .wrap { grid-template-columns: 1fr; gap: 36px; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .hero-figure { display: none; }
-}
-
-/* Móvil */
-@media (max-width: 600px) {
-  .wrap { padding: 0 18px; }
-  .hero { padding: 64px 0 56px; }
-  .hero h1 { font-size: 32px; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .header-actions .btn-primary { display: none; }
-  .trust-inner { grid-template-columns: 1fr; }
-  section { padding: 56px 0; }
-}
-
-/* Accesibilidad: respeta si el usuario pidió menos animaciones */
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
