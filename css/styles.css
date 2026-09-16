@@ -146,7 +146,7 @@
 
   /* ---------- Services ---------- */
   .services-list{
-    display:grid;grid-template-columns:1fr 1fr;
+    display:grid;grid-template-columns:repeat(3,1fr);
     border-top:1px solid var(--hairline);
   }
   .service-row{
@@ -154,7 +154,7 @@
     padding:28px 30px;
     border-bottom:1px solid var(--hairline);
   }
-  .service-row:nth-child(odd){border-right:1px solid var(--hairline);}
+  .service-row:not(:last-child){border-right:1px solid var(--hairline);}
   .service-row svg{width:22px;height:22px;flex:none;color:var(--navy-600);margin-top:3px;}
   .service-row h3{
     font-size:16.5px;font-weight:600;margin:0 0 6px;color:var(--navy-900);
@@ -259,7 +259,7 @@
     .trust-inner{grid-template-columns:1fr 1fr;}
     .trust-item:nth-child(3){border-left:none;}
     .services-list{grid-template-columns:1fr;}
-    .service-row:nth-child(odd){border-right:none;}
+    .service-row:not(:last-child){border-right:none;}
     .about .wrap{grid-template-columns:1fr;gap:36px;}
     .about-visual{order:-1;max-width:280px;margin:0 auto;}
     .contact-grid{grid-template-columns:1fr;}
