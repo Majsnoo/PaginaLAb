@@ -213,18 +213,12 @@
   }
 
   /* ---------- Opening hours ---------- */
-  .hours{background:var(--white);}
-  .hours-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    border-top:1px solid var(--hairline);border-left:1px solid var(--hairline);
-  }
-  .hours-item{
-    display:flex;flex-direction:column;gap:8px;
-    padding:26px 28px;border-right:1px solid var(--hairline);
-    border-bottom:1px solid var(--hairline);
-  }
-  .hours-day{font-size:14px;color:var(--text-muted);}
-  .hours-time{font-size:17px;font-weight:600;color:var(--navy-900);}
+  .hours-block{margin:24px 0 28px;padding-top:20px;border-top:1px solid var(--hairline);}
+  .hours-block h3{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--navy-900);margin:0 0 12px;}
+  .hours-list{display:flex;flex-direction:column;}
+  .hours-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--hairline);font-size:13.5px;}
+  .hours-row span{color:var(--text-muted);}
+  .hours-row strong{font-weight:600;color:var(--navy-900);text-align:right;white-space:nowrap;}
 
   /* ---------- WhatsApp float ---------- */
   .wa-float{
@@ -271,7 +265,8 @@
     .contact-info{border-right:none;border-bottom:1px solid var(--hairline);}
     .map-wrap{min-height:320px;}
     .hero-figure{display:none;}
-    .hours-grid{grid-template-columns:1fr;}
+    .hours-row{align-items:flex-start;}
+    .hours-row strong{white-space:normal;}
   }
   @media (max-width:600px){
     .wrap{padding:0 18px;}
