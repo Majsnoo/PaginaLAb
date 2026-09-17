@@ -62,7 +62,7 @@
   }
   .btn-primary{background:var(--navy-900);color:var(--white);}
   .btn-primary:hover{background:var(--navy-700);}
-  .btn-whatsapp{background:#1E7A46;color:var(--white);}
+  .btn-whatsapp{background:#1E7A46;color:var(--white);padding:12px 24px;}
   .btn-whatsapp:hover{background:#176038;}
   .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45);}
   .btn-outline:hover{border-color:var(--white);}
@@ -207,6 +207,7 @@
   .contact-divider{border:0;border-top:1px solid var(--hairline);margin:0 0 22px;}
   .contact-cta{display:flex;flex-direction:column;gap:12px;}
   .contact-cta .btn{width:100%;padding:13px 22px;}
+  .contact-cta .btn-whatsapp{padding:14px 24px;}
 
   .map-wrap{position:relative;min-height:420px;background:#dbe3ee;}
   .map-wrap iframe{
