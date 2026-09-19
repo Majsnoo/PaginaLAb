@@ -1,3 +1,4 @@
+ /*---- Variables ---*/
  :root{
     --navy-900:#0B1830;
     --navy-800:#122448;
@@ -114,7 +115,7 @@
   }
   .hero-figure svg{width:150px;height:150px;color:rgba(255,255,255,.5);}
 
-  /* ---------- Trust metrics ---------- */
+  /* ---------- Trust metricas ---------- */
   .trust{
     background:var(--off-white);
     border-bottom:1px solid var(--hairline);
@@ -144,7 +145,7 @@
   }
   .section-head p{font-size:16px;line-height:1.65;color:var(--text-muted);margin:0;}
 
-  /* ---------- Services ---------- */
+  /* ---------- servicios ---------- */
   .services-list{
     display:grid;grid-template-columns:repeat(3,1fr);
     border-top:1px solid var(--hairline);
@@ -161,7 +162,7 @@
   }
   .service-row p{font-size:14.5px;line-height:1.6;color:var(--text-muted);margin:0;}
 
-  /* ---------- About ---------- */
+  /* ---------- About us ---------- */
   .about{background:var(--navy-900);color:var(--white);}
   .about .wrap{
     display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
@@ -185,7 +186,7 @@
   .about-visual::before{content:"";position:absolute;inset:26px;border:1px solid rgba(95,163,208,.4);}
   .about-visual svg{width:38%;height:38%;color:rgba(255,255,255,.55);}
 
-  /* ---------- Contact ---------- */
+  /* ---------- Contacto ---------- */
   .contact{background:var(--off-white);}
   .contact-grid{
     display:grid;grid-template-columns:0.9fr 1.1fr;gap:0;
@@ -214,7 +215,7 @@
     position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(8%) contrast(1.02);
   }
 
-  /* ---------- Opening hours ---------- */
+  /* ---------- horas de atencion ---------- */
   .hours-block{margin:20px 0 18px;padding-top:18px;border-top:1px solid var(--hairline);}
   .hours-block h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--navy-900);margin:0 0 10px;}
   .hours-list{display:flex;flex-direction:column;}
@@ -222,7 +223,7 @@
   .hours-row span{color:var(--text-muted);}
   .hours-row strong{font-weight:600;color:var(--navy-900);text-align:right;white-space:nowrap;}
 
-  /* ---------- WhatsApp float ---------- */
+  /* ---------- WhatsApp ---------- */
   .wa-float{
     position:fixed;bottom:24px;right:24px;z-index:60;
     width:56px;height:56px;border-radius:50%;
@@ -286,3 +287,4 @@
     .reveal{opacity:1;transform:none;transition:none;}
     .wa-float.show{animation:none;}
   }
+/*---------------------------------------------------------------*/
