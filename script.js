@@ -10,7 +10,9 @@
       var isOpen = nav.style.display === 'flex';
       if(isOpen){
         nav.style.display = '';
+        toggle.setAttribute('aria-expanded', 'false');
       } else {
+        toggle.setAttribute('aria-expanded', 'true');
         nav.style.display = 'flex';
         nav.style.flexDirection = 'column';
         nav.style.position = 'absolute';
@@ -24,7 +26,10 @@
       }
     });
     document.querySelectorAll('nav.main-nav a').forEach(function(a){
-      a.addEventListener('click', function(){ nav.style.display = ''; });
+      a.addEventListener('click', function(){
+        nav.style.display = '';
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
